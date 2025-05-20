@@ -3,6 +3,29 @@
 // =============================================
 const gifts = Array.from(document.querySelectorAll('.gift-card')).map((card, index) => {
     const priceText = card.querySelector('.gift-price').textContent;
+    
+    // Links de pagamento específicos para cada presente
+    const paymentLinks = {
+        1: "https://payment-link-v3.ton.com.br/pl_PRGV8BYbxvEDJX4cMtYmpzg5ylMwjOaq", // Sanduicheira
+        2: "https://payment-link-v3.ton.com.br/pl_KEyGpXqNR6za9xrHOHQAY8ZVO7WlQ40b", // Liquidificador
+        3: "https://payment-link-v3.ton.com.br/pl_DGPEark6lLXeK0yceslMqvyxNMmboY17", // Batedeira Mondial
+        4: "https://payment-link-v3.ton.com.br/pl_ROg91dl7a2LNwzYfJBCrorQkPZ863KbB", // Cafeteira Elétrica
+        5: "https://payment-link-v3.ton.com.br/pl_nzkQG3NlyvV1bQVTBJiEv4B09RrLdmxZ", // Garrafa Elétrica
+        6: "https://payment-link-v3.ton.com.br/pl_ynAKlW8ENZ7JVq6XSGH2Q9LzdPDRM4rg", // Ferro de Engomar
+        7: "https://payment-link-v3.ton.com.br/pl_Dgox9yWR5q80k5bCWSLL34jwp6MAvnXk", // Jogo de 4 Xícaras
+        8: "https://payment-link-v3.ton.com.br/pl_VXB2L6lNPgE4Y88sN4CgYAx87qv01nyj", // Conjunto jarra e copos
+        9: "https://payment-link-v3.ton.com.br/pl_MnN20VeXA36zqM2fVh95zqbZxOdYEwo9", // Kit Utensílios de Cozinha
+        10: "https://payment-link-v3.ton.com.br/pl_Dnl3516bpgWoLwlCDU9vGKB02Xzk9eRm", // Kit Edredom Casal Queen
+        11: "https://payment-link-v3.ton.com.br/pl_a43pzWej6JLEe2ktj4fXOnby8vVPGXKq", // Kit Banheiro Bambu
+        12: "https://payment-link-v3.ton.com.br/pl_P3GAxQdnMLm1orgbSGte8vr2JewpW7ag", // Conjunto 3 Peças Banheiro
+        13: "https://payment-link-v3.ton.com.br/pl_P3GAxQdnMLm1orgbSGte8vr2JewpW7ag", // Jogo De Banheiro
+        14: "https://payment-link-v3.ton.com.br/pl_zo7m0xQbvg9NWQgIouevdXr2RGjE54Lw", // Jarra de Vidro
+        15: "https://payment-link-v3.ton.com.br/pl_Vvm2ENx49oLgqlhQ7Fq06KROAQ8wkjY7", // Kit Panos de Prato
+        16: "https://payment-link-v3.ton.com.br/pl_nd9LVXJl7GkovoPwFgTXNY6xjw4DqOa0", // Garrafa Térmica
+        17: "https://payment-link-v3.ton.com.br/pl_eDGkm2r8YVdPb9uxntzyALX1Nw4nQ90K", // Faqueiro 24 Peças
+        18: "https://payment-link-v3.ton.com.br/pl_kyna4b8zqJE0N8rH2sKQVQ1PeA7W3XZr"  // Kit Prato Raso
+    };
+
     return {
         id: index + 1,
         name: card.querySelector('h3').textContent,
@@ -10,11 +33,12 @@ const gifts = Array.from(document.querySelectorAll('.gift-card')).map((card, ind
         image: card.querySelector('.gift-image img').src,
         description: card.querySelector('.gift-description').textContent,
         element: card,
-        pixKey: "083.337.053-75",
-        paymentLink: "https://pag.ae/7YfV5vJ4L"
+        pixKey: "2f4770c6-9679-4526-851c-9081395a64a9",
+        paymentLink: paymentLinks[index + 1] || "https://pag.ae/7YfV5vJ4L" // Padrão caso não encontre
     };
 });
 
+// Restante do código permanece igual...
 // Configurações do tema
 const themeConfig = {
     colors: {
@@ -358,40 +382,6 @@ function createBubble() {
     
     return bubble;
 }
-
-// Confirmação de Presença
-document.getElementById('attendanceForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        guests: document.getElementById('guests').value,
-        attendance: document.querySelector('input[name="attendance"]:checked').value
-    };
-    
-    // Aqui você pode adicionar o código para enviar os dados para um servidor
-    // Por exemplo, usando fetch() para uma API
-    
-    // Simulação de envio
-    const modal = createModal(`
-        <h3>Confirmação Recebida!</h3>
-        <p>Obrigado por confirmar sua presença, ${escapeHtml(formData.name)}!</p>
-        <p>${formData.attendance === 'yes' 
-            ? 'Estamos ansiosos para vê-lo no nosso chá de panela!' 
-            : 'Sentiremos sua falta!'}</p>
-        
-        <button onclick="closeModal()" class="cancel-btn">
-            <i class="fas fa-times"></i> Fechar
-        </button>
-    `);
-    
-    document.body.appendChild(modal);
-    document.body.style.overflow = 'hidden';
-    
-    // Limpa o formulário
-    this.reset();
-});
 
 // Inicializa a aplicação
 document.addEventListener('DOMContentLoaded', function() {

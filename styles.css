@@ -824,79 +824,7 @@ footer {
     font-size: 1.2rem;
 }
 
-/* ==================== */
-/* CONFIRMAÇÃO DE PRESENÇA */
-/* ==================== */
-.attendance-confirmation {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 4px 15px rgba(255, 133, 162, 0.1);
-}
 
-.attendance-confirmation h3 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #d23669;
-}
-
-.attendance-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #555;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.radio-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.radio-group label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: normal;
-    cursor: pointer;
-}
-
-.submit-btn {
-    display: block;
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #ff85a2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #d23669;
-    transform: translateY(-2px);
-}
 
 /* ==================== */
 /* TUTORIAL DE PAGAMENTO */
@@ -953,3 +881,4 @@ footer {
     color: #666;
     font-size: 0.9rem;
 }
+

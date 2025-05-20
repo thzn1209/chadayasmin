@@ -16,9 +16,9 @@ const gifts = Array.from(document.querySelectorAll('.gift-card')).map((card, ind
         8: "https://payment-link-v3.ton.com.br/pl_VXB2L6lNPgE4Y88sN4CgYAx87qv01nyj", // Conjunto jarra e copos
         9: "https://payment-link-v3.ton.com.br/pl_MnN20VeXA36zqM2fVh95zqbZxOdYEwo9", // Kit Utensílios de Cozinha
         10: "https://payment-link-v3.ton.com.br/pl_Dnl3516bpgWoLwlCDU9vGKB02Xzk9eRm", // Kit Edredom Casal Queen
-        11: "https://payment-link-v3.ton.com.br/pl_a43pzWej6JLEe2ktj4fXOnby8vVPGXKq", // Kit Banheiro Bambu
-        12: "https://payment-link-v3.ton.com.br/pl_P3GAxQdnMLm1orgbSGte8vr2JewpW7ag", // Conjunto 3 Peças Banheiro
-        13: "https://payment-link-v3.ton.com.br/pl_P3GAxQdnMLm1orgbSGte8vr2JewpW7ag", // Jogo De Banheiro
+        11: "https://payment-link-v3.ton.com.br/pl_KoGM58Pvm9y4paBFEmH8l7RbrwkXZazq", // Kit Banheiro Bambu
+        12: "https://payment-link-v3.ton.com.br/pl_a43pzWej6JLEe2ktj4fXOnby8vVPGXKq", // Conjunto 3 Peças Banheiro
+        13: "https://payment-link-v3.ton.com.br/pl_zo7m0xQbvg9NWQgIouevdXr2RGjE54Lw", // Jogo De Banheiro
         14: "https://payment-link-v3.ton.com.br/pl_zo7m0xQbvg9NWQgIouevdXr2RGjE54Lw", // Jarra de Vidro
         15: "https://payment-link-v3.ton.com.br/pl_Vvm2ENx49oLgqlhQ7Fq06KROAQ8wkjY7", // Kit Panos de Prato
         16: "https://payment-link-v3.ton.com.br/pl_nd9LVXJl7GkovoPwFgTXNY6xjw4DqOa0", // Garrafa Térmica
